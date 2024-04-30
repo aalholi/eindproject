@@ -1,0 +1,40 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #eeeeee;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+.nav-link {
+  color: black;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #00000ec4;
+  font-weight: 500;
+}
+
+.logoImages {
+  padding-right: 15px;
+}
+
+.loginBtn {
+  color: #eeeeee;
+  font-size: 22px;
+}
+
+.btnLogin {
+  border-radius: 15px;
+}
+
+.uil {
+  font-size: 25px;
+  padding-right: 10px;
+}
