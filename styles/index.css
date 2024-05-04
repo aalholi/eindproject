@@ -25,7 +25,7 @@ header {
   padding-right: 15px;
 }
 
-.loginBtn {
+.loginBtnDesktop a {
   color: #eeeeee;
   font-size: 22px;
 }
@@ -71,4 +71,45 @@ header {
 
 footer {
   background-color: #eeeeee;
+  height: max-content;
+  padding-top: 40px;
+}
+
+.navbar-menu-mobile {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.navbar-toggler {
+  background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: block;
+    color: white;
+  }
+  .navbar-mobile .nav-link {
+    color: white;
+  }
+  .nav-links {
+    display: none;
+  }
+  .loginBtnDesktop {
+    display: none;
+  }
+  .btn-login-mobile-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .btnLogin-mobile {
+    border-radius: 15px;
+    background-color: white;
+  }
+  .loginBtn-mobile {
+    color: black;
+    font-size: 22px;
+  }
 }

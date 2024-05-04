@@ -22,7 +22,7 @@
             </a>
           </div>
    
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
             <li><a href="#" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="#" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
@@ -30,14 +30,34 @@
             <li><a href="#" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
           </ul>
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btnLogin btn-dark me-2"><a href="" class="loginBtn text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            <nav class="navbar navbar-menu-mobile navbar-dark">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+              <div class="bg-dark p-4">
+                <ul class="nav navbar-mobile col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+                  <li><a href="#" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+                  <li><a href="#" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+                  <li><a href="#" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+                  <li><a href="#" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+                </ul>
+                <div class="col-md-3 text-end btn-login-mobile-menu">
+                  <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="" class="loginBtn-mobile text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+              </div>
+            </div>
         </header>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-      <footer class="py-5">
+      <footer>
         <div class="row">
         <div class="col-6 col-md-2 mb-3">
         <img src="images/logo-search-grid-1x (1).webp">
@@ -62,7 +82,7 @@
         <i class="uil uil-instagram-alt"></i>
       </div>
     </div>
-      <div class="copyright d-flex flex-wrap align-items-center py-3 my-4 border-top">
+      <div class="copyright d-flex flex-wrap ">
         <div class="col-md-4 d-flex align-items-center">
           <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Brawnies Escape Rooms. All rights reserved</span>
         </div>
