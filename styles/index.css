@@ -142,3 +142,39 @@ footer {
     --bs-gutter-x: 0;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .openingsHours {
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .logo-footer {
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 17%;
+  }
+}
+
+@media only screen and (max-width: 865px) {
+  .justify-content-md-between {
+    justify-content: center !important;
+  }
+}
+
+@media only screen and (min-width: 866px) {
+  .justify-content-md-between {
+    justify-content: none;
+  }
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 15%;
+  }
+}
