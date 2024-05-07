@@ -133,8 +133,9 @@ footer {
     margin-left: 10%;
   }
   .openingsHours {
-    width: 100%;
     justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 
   .row {
