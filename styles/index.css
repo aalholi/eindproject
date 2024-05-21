@@ -69,6 +69,41 @@ header {
   color: white;
 }
 
+.card-img-top {
+  border-radius: 0px;
+  padding: 5px;
+}
+.card {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+#online-games,
+#offline-games,
+#header {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+#offline-games {
+  margin-top: 10rem;
+}
+
+#offline-games h2,
+#online-games h2 {
+  color: #232222;
+}
+
+.row {
+  gap: 5rem;
+  justify-content: space-between;
+  --bs-gutter-x: 0rem;
+}
+
+.non-clikable-buttons {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
 footer {
   background-color: #eeeeee;
   height: max-content;
