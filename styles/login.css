@@ -8,14 +8,17 @@
     border-radius: 10px;
 
 }
-.row{
-    
+.wrapper_login .row{
+    gap:0;
     
     margin-left: 20%;
     font-weight: bold;
 }
-.row input{
-    
+.wrapper_login  .row input{
+    width: 80%;
+}
+.wrapper_login .col-form-label{
+    display: inline-block;
 }
 .wrapper_login h1{
     text-align: center;
@@ -32,7 +35,7 @@
 .wrapper_login button:hover{
     background-color: #a5a5a5;
 }
-.form-control{
+.wrapper_login  .form-control{
     border: 2px solid black;
 }
 .wrapper_login p{
@@ -46,5 +49,11 @@
 .wrapper_login p a:hover{
     color: #000;
 }
-800 - 600
+@media screen and (max-width: 800px) {
+    .wrapper_login{
+        width: 60%;
+        font-size: small;
+    }
+    
+  }
  
