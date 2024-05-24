@@ -1,0 +1,19 @@
+#wrapper{
+    width: 63.4375%;
+    margin: 0 auto;
+    
+}
+.card{
+    border: none;
+    background-color: #F9F9F9;
+    color: #a5a5a5;
+}
+#wrapper h1{
+    color:#a5a5a5;
+    font-weight: bold;
+}
+.card button{
+    border-radius: 15px;
+    width: fit-content;
+
+}
