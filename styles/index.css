@@ -23,11 +23,15 @@ header {
 
 .logoImages {
   padding-right: 15px;
+  border-radius: 15px;
 }
-
+.loginBtnDesktop{
+  border-radius: 15px;
+}
 .loginBtnDesktop a {
   color: #eeeeee;
   font-size: 22px;
+  
 }
 
 .btnLogin {
