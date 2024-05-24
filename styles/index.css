@@ -11,6 +11,19 @@ header {
   padding-right: 15px;
 }
 
+#hero-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+}
+
+#hero-img img {
+  width: 100%;
+}
+.mb-4 {
+  margin-bottom: 0rem !important;
+}
+
 .nav-link {
   color: black;
   font-weight: 500;
@@ -178,6 +191,25 @@ footer {
   }
 }
 
+#header h1 {
+  font-family: "Merriweather", serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+#header p {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#online-games h2 {
+  font-family: "Merriweather", serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #8f8a8a;
+}
+
 @media only screen and (max-width: 768px) {
   .openingsHours {
     justify-content: center;
@@ -189,6 +221,25 @@ footer {
     justify-content: center;
     margin-left: 150px;
     margin-right: 150px;
+  }
+
+  #header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+
+  #header p {
+    font-family: "Merriweather", serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  #online-games h2 {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #8f8a8a;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -202,6 +253,25 @@ footer {
   .justify-content-md-between {
     justify-content: center !important;
   }
+
+  #header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  #header p {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  #online-games h2 {
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #8f8a8a;
+  }
 }
 
 @media only screen and (min-width: 866px) {
@@ -211,5 +281,24 @@ footer {
   .col-md-3 {
     flex: 0 0 auto;
     width: 15%;
+  }
+
+  #header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+  }
+
+  #header p {
+    font-family: "Merriweather", serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  #online-games h2 {
+    font-family: "Merriweather", serif;
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #8f8a8a;
   }
 }
