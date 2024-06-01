@@ -8,14 +8,35 @@ if($dbConnect->connect_error){
     die("Connection failed");
     exit();
 }
+//sql-statement
+$sql = $dbConnect->prepare ("SELECT email, wachtwoord FROM gebruikers WHERE email = ? AND wachtwoord = ?;");
+//parameters verbinden met een variabele
+$sql->bind_param("ss", $email, $password);
 
-if (isset($_GET['submit'])){
-    $password = $_GET['inputPassword'];
-    $email = $_GET['inputEmail'];
-
+if (isset($_POST['login'])){
+	//waarden in de variabelen invullen
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+	//query uitvoeren => in de variabele resultaat gestoken
+	$sql->execute();
+	$resultaat = $sql->get_result();
+	//controleren of er rijen zijn in ons resultaat
+	if($resultaat->num_rows>0){
+    $row = $resultaat->fetch_assoc();
+    $_SESSION['voornaam']= $row['voornaam'];
+    header("Location: ../index.html");
+    
+    die();
+    
+	} else {
+    echo '<script type="text/javascript">
+           alert("Foute email/password combinatie"); 
+    </script>'; 
+	}
 
 }
-
+//afsluiten connectie
+mysqli_close($dbConnect);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,15 +95,15 @@ if (isset($_GET['submit'])){
         </header>
         <main class="wrapper_login">
             <h1 class="pt-4">Login</h1>
-            <form>
+            <form method="post" action="">
                 <div class="row mb-3 pt-4">
-                  <label for="inputEmail" class="col-12 col-form-label">Email</label>  
+                  <label for="email" class="col-12 col-form-label">Email</label>  
                   <div class="col-12">
                     <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter your email" required>
                   </div>
                 </div>
                 <div class="row mb-3 pt-4">
-                  <label for="inputPassword3" class="col-12 col-form-label">Password</label>
+                  <label for="password" class="col-12 col-form-label">Password</label>
                   <div class="col-12">
                     <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Enter your password" required>
                   </div>
