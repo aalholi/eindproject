@@ -25,6 +25,8 @@ if (isset($_POST['login'])){
 	if($resultaat->num_rows>0){
     $row = $resultaat->fetch_assoc();
     $_SESSION['voornaam'] = $row['voornaam'];
+     
+
     header("Location: ./navbar.php");
     
     die();
