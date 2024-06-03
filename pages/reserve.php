@@ -59,7 +59,7 @@ $type = $_POST["game"];
 $naam = $_POST["surname"];
 $voornaam = $_POST["name"];
 $sql->execute();
-echo "Thank you for reserving!"
+echo "Thank you for reserving!";
 mysqli_close($dbConnect);
 
 ?>
