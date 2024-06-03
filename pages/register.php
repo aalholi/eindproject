@@ -58,9 +58,47 @@ mysqli_close($dbConnect);
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
-  <?php
-        include "./navbar.php"; 
-        ?>
+  <header class="navbar d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="../index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img class="bi" width="100" height="60" role="img" aria-label="Bootstrap" src="../images/logo.webp"/>
+            </a>
+          </div>
+   
+          <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="./games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            
+            
+            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./login.php" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            
+            <nav class="navbar navbar-menu-mobile navbar-dark">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+              <div class="navbar-mobile-container bg-dark p-4">
+                <ul class="nav navbar-mobile justify-content-center">
+                <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="../games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+                </ul>
+                
+                <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="./login.php" class="loginBtn-mobile text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+                
+              </div>
+            </div>
+        </header>
         <main class="wrapper_register">
             <h1 class="pt-4">Register</h1>
             <form method="post" action="">
@@ -99,7 +137,7 @@ mysqli_close($dbConnect);
                 
                 <button type="submit" class="btn btn-lg btn-dark col-8" name="register">Register</button>
                 
-                <p>Already have an account? <a href="#"> Login here</a></p>
+                <p>Already have an account? <a href="./login.php"> Login here</a></p>
               </form>
         </main>
 

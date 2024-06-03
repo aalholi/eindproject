@@ -11,8 +11,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/games.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/games.css">
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>

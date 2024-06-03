@@ -2,4 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("location: ./games.php")
+header("location: ./games.php");
+?>

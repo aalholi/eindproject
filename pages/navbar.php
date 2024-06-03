@@ -18,17 +18,17 @@
   <body>
         <header class="navbar d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="../index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <a href="../index.php" class="d-inline-flex link-body-emphasis text-decoration-none">
               <img class="bi" width="100" height="60" role="img" aria-label="Bootstrap" src="../images/logo.webp"/>
             </a>
           </div>
    
           <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-            <li><a href="./games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="./games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
-            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
-            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+            <li><a href="./reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./AboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
           </ul>
           <div class="col-md-3 text-end">
             <?php if (isset($_SESSION['voornaam'])){?>

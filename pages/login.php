@@ -1,4 +1,5 @@
 <?php
+    session_start();
 //databankconnectie maken
 //server, username, wachtwoord, databanknaam
 $dbConnect = new mysqli('auth-db779.hstgr.io', 'u893409859_GroepA', 'ZeMeAw123', 'u893409859_GroepA');
@@ -23,11 +24,8 @@ if (isset($_POST['login'])){
   
 	//controleren of er rijen zijn in ons resultaat
 	if($resultaat->num_rows>0){
-    $row = $resultaat->fetch_assoc();
-    $_SESSION['voornaam'] = $row['voornaam'];
-     
-
-    header("Location: ./navbar.php");
+    $_SESSION['voornaam'] = "connected";
+    header("Location: ./games.php");
     
     die();
     
@@ -60,9 +58,52 @@ mysqli_close($dbConnect);
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
-        <?php
-        include "./navbar.php"; 
-        ?>
+  <header class="navbar d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="../index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img class="bi" width="100" height="60" role="img" aria-label="Bootstrap" src="../images/logo.webp"/>
+            </a>
+          </div>
+   
+          <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="./games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <?php if (isset($_SESSION['voornaam'])){?>
+              <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./logout.php" class="link-login-button text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
+              
+              <?php } else { ?>
+            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./login.php" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            <?php } ?>
+            <nav class="navbar navbar-menu-mobile navbar-dark">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+              <div class="navbar-mobile-container bg-dark p-4">
+                <ul class="nav navbar-mobile justify-content-center">
+                <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="../games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+                </ul>
+                <div class="col-md-3 text-end btn-login-mobile-menu p-2">
+                <?php if (isset($_SESSION['voornaam'])){?>
+                <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="./login.php" class="loginBtn-mobile text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
+                <?php } else { ?>
+                <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="./login.php" class="loginBtn-mobile text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+                <?php } ?>
+              </div>
+            </div>
+        </header>
         <main class="wrapper_login">
             <h1 class="pt-4">Login</h1>
             <form method="post" action="">
@@ -82,7 +123,7 @@ mysqli_close($dbConnect);
                 
                 <button type="submit" class="btn btn-lg btn-dark col-8" name="login">Sign in</button>
                 
-                <p>Don't have an account? <a href="#"> Register here</a></p>
+                <p>Don't have an account? <a href="./register.php"> Register here</a></p>
               </form>
         </main>
 
