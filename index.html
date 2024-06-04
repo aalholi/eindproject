@@ -24,8 +24,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 
+    <!-- Flickery CDN -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
     <!-- Style sheet -->
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/home.css">
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
@@ -67,96 +72,73 @@
             </div>
         </header>
         <main>
-          <section id="hero-img">
-            <img src="images/home.webp" alt="photo">
+          <section id="hero">
+            <div class="img">
+              <img width="300px" src="images/home/brownie-with-ai-generated-free-png 1.png" alt="hero - image">
+            </div>
+            <h2>Welcome To --</h2> 
+            <h1>Brawnies </h1>
+            <h1>Escape Rooms</h1>
           </section>
-          <section id="header">
-            <h1>Welcome To Brawnies Escape Room</h1>
-            <p>Experience the thrill of solving puzzles and escaping room challenging rooms. </p>
+          <section id="about">
+            <p>Experience the thrill of solving puzzles and escaping rom challenging rooms.</p>
           </section>
-          
-          <section id="online-games">
-            <h2>Online Games</h2>
-            <div class="row">
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Game 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
+          <section id="onlineGames">
+            <div class="game">
+              <div class="imageHolder">
+                <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
+              </div>
+              <div class="description">
+                <span>/online Games</span>
+                <hr>
+                <h2>01 "The Lost Key"</h2>
+                <hr>
+                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <hr>
               </div>
             </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Game 2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
+            <div class="game">
+              <div class="imageHolder">
+                <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
+              </div>
+              <div class="description">
+                <span>/online Games</span>
+                <hr>
+                <h2>02 "Het Verloren Tijdmachine"</h2>
+                <hr>
+                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <hr>
               </div>
             </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Game 3</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
+            <div class="game">
+              <div class="imageHolder">
+                <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
+              </div>
+              <div class="description">
+                <span>/online Games</span>
+                <hr>
+                <h2>03 "Wally's Hamburger"</h2>
+                <hr>
+                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <hr>
               </div>
             </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Game 4</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="non-clikable-buttons" style="background-color: #6c757d;">Coming Soon!!</span>
-              </div>
-            </div>
-
-          </div>
           </section>
-          <section id="offline-games">
+          <section id="liverooms">
             <h2>Live Rooms</h2>
-            <div class="row">
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Room 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
+            <!-- Flicker -->
+            <div class="carousel" id="carousel" data-flickity='{"autoPlay":true}'>
+              <div class="carousel-cell" style="background-image: url(images/home/lawrence-chismorie-o2ZIh9Bqjtc-unsplash\ 1.png);">
+              </div>
+              <div class="carousel-cell" style="background-image: url(images/home/peter-herrmann-bhF8gu9DaU4-unsplash\ 1.png);">
+              </div>
+              <div class="carousel-cell" style="background-image: url(images/home/marina-reich-qC1JcYEOOv8-unsplash\ 1.png);">
               </div>
             </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Room 2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
-              </div>
-            </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Room 3</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Learn more</a>
-              </div>
-            </div>
-
-            <div class="card" style="width: 30rem;">
-              <img src="./images/home/jaredd-craig-HH4WBGNyltc-unsplash 1.webp" class="card-img-top" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Room 4</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="non-clikable-buttons" style="background-color: #6c757d;">Coming Soon!!</span>
-              </div>
-            </div>
-          </div>
+            
+            <p>Explore our captivating rooms and secure your reservation for an enhanced escape room experience. Whether you're seeking the thrill of live adventures or the convenience of online challenges, we've got you covered!</p>
+            <a class="learnMore" href="./pages/games.php">Learn More</a>
           </section>
-
         </main>
       <footer>
         <div class="row">
@@ -194,5 +176,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+ 
   </body>
 </html>
