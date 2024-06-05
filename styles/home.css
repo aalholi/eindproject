@@ -1,3 +1,4 @@
+/* Deze import haalt fonts van Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mochiy+Pop+P+One&family=Orbitron:wght@400..900&display=swap");
 
 main {
@@ -6,6 +7,8 @@ main {
   font-weight: 700;
   font-style: normal;
 }
+
+/* Stijlen voor de hero sectie */
 #hero {
   margin-top: 5rem;
   width: 100%;
@@ -29,12 +32,15 @@ main {
 #hero .img {
   position: absolute;
   top: 30rem;
-  left: 50rem;
+  left: 45rem;
 }
+
+/* Stijlen voor Bootstrap rijen */
 .row {
   --bs-gutter-x: 1.5rem;
 }
 
+/* Stijlen voor de about sectie */
 #about {
   width: 100%;
   height: 80vh;
@@ -49,6 +55,7 @@ main {
   font-size: 80px;
 }
 
+/* Stijlen voor de online games sectie */
 #onlineGames {
   width: 100%;
   background-color: #2a2a2a;
@@ -85,6 +92,7 @@ main {
   font-weight: 300;
 }
 
+/* Stijlen voor de live rooms sectie */
 #liverooms {
   width: 100%;
   height: 150vh;
@@ -97,7 +105,7 @@ main {
   text-align: center !important;
 }
 
-/* external css: flickity.css */
+/* Externe CSS: flickity.css */
 
 * {
   box-sizing: border-box;
@@ -112,6 +120,7 @@ body {
   margin-top: 8rem;
   margin-bottom: 8rem;
 }
+
 .carousel-cell {
   width: 66%;
   height: 500px;
@@ -140,4 +149,191 @@ body {
   color: white !important;
   background-color: #2a2a2a;
   margin-left: 41%;
+}
+
+@media (max-width: 767px) {
+  /* styles for mobile phones */
+  #hero {
+    height: 60vh;
+  }
+  #hero h2 {
+    font-size: 50px;
+    text-align: center !important;
+  }
+  #hero .img {
+    display: none;
+  }
+  #hero h1 {
+    font-size: 90px;
+    text-align: center !important;
+  }
+
+  #about p {
+    font-size: 30px;
+  }
+  #onlineGames {
+    height: auto;
+    margin-bottom: 5rem;
+    clear: both !important;
+  }
+
+  #onlineGames .imageHolder {
+    float: none;
+    width: 100%;
+    padding-top: 0;
+  }
+  #onlineGames .description {
+    float: none;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .description h2 {
+    font-size: 40px;
+  }
+  .description p {
+    font-size: 20px;
+  }
+  .game {
+    height: auto;
+    clear: both;
+  }
+  #liverooms {
+    clear: both;
+    height: 150vh;
+  }
+  #liverooms h2 {
+    font-size: 40px;
+  }
+  #liverooms p {
+    font-size: 20px;
+  }
+  #liverooms .learnMore {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-left: 29%;
+    clear: both;
+  }
+  .carousel-cell {
+    width: 100%;
+    height: 300px;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+
+  footer {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* styles for tablet devices */
+  #hero {
+    height: auto;
+    padding-bottom: 5rem;
+  }
+  #hero h2 {
+    font-size: 70px;
+    text-align: center !important;
+  }
+  #hero .img {
+    display: none;
+  }
+  #hero h1 {
+    font-size: 110px;
+    text-align: center !important;
+  }
+  #about {
+    height: auto;
+  }
+
+  #about p {
+    font-size: 30px;
+    padding-bottom: 200px;
+  }
+
+  #onlineGames {
+    height: auto;
+    margin-bottom: 5rem;
+    clear: both !important;
+  }
+
+  #onlineGames .imageHolder {
+    float: none;
+    width: 100%;
+    padding-top: 0;
+    clear: both;
+  }
+  #onlineGames .description {
+    float: none !important;
+    clear: both;
+    width: 100%;
+    height: 70vh;
+    border-radius: 0;
+  }
+
+  .description h2 {
+    font-size: 40px;
+  }
+  .description p {
+    font-size: 20px;
+  }
+  .game {
+    height: auto;
+    clear: both;
+  }
+
+  .game .imageholder {
+    float: none;
+    clear: both;
+  }
+
+  #liverooms {
+    clear: both;
+  }
+  #liverooms h2 {
+    font-size: 40px;
+  }
+  #liverooms p {
+    font-size: 30px;
+  }
+  #liverooms .learnMore {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin-left: 35%;
+    clear: both;
+  }
+  .carousel-cell {
+    width: 100%;
+    height: 300px;
+  }
+  .nav-links {
+    flex-direction: column;
+  }
+
+  footer {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  /* styles for devices between tablet and desktop */
+  #hero {
+    height: 90vh;
+  }
+  #hero h2 {
+    font-size: 150px;
+  }
+  #hero h1 {
+    font-size: 200px;
+  }
+  .game {
+    height: 90vh;
+  }
+  .carousel-cell {
+    width: 60%;
+    height: 500px;
+  }
 }

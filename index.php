@@ -43,13 +43,18 @@
    
           <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-            <li><a href="games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="pages/games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="pages/leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
-            <li><a href="pages/reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="pages/reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
             <li><a href="pages/aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
           </ul>
           <div class="col-md-3 text-end">
-            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+          <?php if (isset($_SESSION['voornaam'])){?>
+              <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="pages/logout.php" class="link-login-button text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
+              
+              <?php } else { ?>
+            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="pages/login.php" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            <?php } ?>
             <nav class="navbar navbar-menu-mobile navbar-dark">
               <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,13 +66,18 @@
               <div class="navbar-mobile-container bg-dark p-4">
                 <ul class="nav navbar-mobile justify-content-center">
                   <li><a href="index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-                  <li><a href="games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
-                  <li><a href="#" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
-                  <li><a href="#" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
-                  <li><a href="#" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+                  <li><a href="pages/games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+                  <li><a href="pages/leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
+                  <li><a href="pages/reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+                  <li><a href="pages/aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
                 </ul>
                 <div class="col-md-3 text-end btn-login-mobile-menu p-2">
-                  <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="" class="loginBtn-mobile text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+                <?php if (isset($_SESSION['voornaam'])){?>
+              <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./logout.php" class="link-login-button text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
+              
+              <?php } else { ?>
+            <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./login.php" class="link-login-button text-decoration-none"><i class="uil uil-user"></i>Login</a></button>
+            <?php } ?>
               </div>
             </div>
         </header>
@@ -93,33 +103,33 @@
                 <hr>
                 <h2>01 "The Lost Key"</h2>
                 <hr>
-                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers.</p>
                 <hr>
               </div>
             </div>
             <div class="game">
               <div class="imageHolder">
-                <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
+                <img src="images//home/time-machie-lab 1.png" alt="online game 1 image">
               </div>
               <div class="description">
                 <span>/online Games</span>
                 <hr>
                 <h2>02 "Het Verloren Tijdmachine"</h2>
                 <hr>
-                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <p>Je bevindt je in het laboratorium van een briljante wetenschapper die een tijdmachine heeft uitgevonden. De wetenschapper is verdwenen. Het is aan jouw om de wetenschapper te vinden. </p>
                 <hr>
               </div>
             </div>
             <div class="game">
               <div class="imageHolder">
-                <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
+                <img src="images//home/wallys-burgur 1.png" alt="online game 1 image">
               </div>
               <div class="description">
                 <span>/online Games</span>
                 <hr>
                 <h2>03 "Wally's Hamburger"</h2>
                 <hr>
-                <p>You find yourself in a mysterious office belonging to a renowned puzzle enthusiast, Mr. Enigma. Known for his love of brainteasers, </p>
+                <p>Wally's Hamburger, Als kok wordt je ondervraagt door de inspectie. Hoe ga je daar uit geraken?</p>
                 <hr>
               </div>
             </div>
