@@ -54,7 +54,7 @@
         <div class="card-body">
           <h5 class="card-title">Wally's Hamburger</h5>
           <p class="card-text">Wally's Hamburger, Als kok wordt je ondervraagt door de inspectie. Hoe ga je daar uit geraken?</p>
-          <a href="../onlineGames/WallyHamburger.exe" download><button type="button" class="btn btn-dark btn-lg">Download</button></a>
+          <a href="../onlineGames/WallysHamburger" download><button type="button" class="btn btn-dark btn-lg">Download</button></a>
 
 
         </div>
