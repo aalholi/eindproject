@@ -31,6 +31,7 @@
             <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
           </ul>
           <div class="col-md-3 text-end">
+            <!-- als de sessie aan is dan toon je de logout button anders toon je de login button -->
             <?php if (isset($_SESSION['voornaam'])){?>
               <button type="button" class="btn loginBtnDesktop btn-dark me-2"><a href="./logout.php" class="link-login-button text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
               
@@ -54,6 +55,7 @@
             <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
                 </ul>
                 <div class="col-md-3 text-end btn-login-mobile-menu p-2">
+                  <!-- als de sessie aan is dan toon je de logout button anders toon je de login button -->
                 <?php if (isset($_SESSION['voornaam'])){?>
                 <button type="button" class="btn btnLogin-mobile btn-dark me-2"><a href="./login.php" class="loginBtn-mobile text-decoration-none"><i class="uil uil-signout"></i>Logout</a></button>
                 <?php } else { ?>

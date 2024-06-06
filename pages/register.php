@@ -8,33 +8,36 @@ if($dbConnect->connect_error){
     die("Connection failed");
     exit();
 }
-
+//gebruiker gegvens in een variable steken en inserten
 $sql = $dbConnect->prepare("INSERT INTO gebruikers(voornaam, naam, email, wachtwoord)
 VALUES (?, ?, ?, ?)");
+
 //binden parameters
 $sql->bind_param("ssss", $voornaam, $naam, $email, $wachtwoord);
 
+//bij het klikken op de register button
 if (isset($_POST['register'])){
-
+  //wachtwoord confirmatie bekijken
   $wachtwoord = trim($_POST['password']);
   $wachtwoord_conf = trim($_POST['confirm_password']);
 
   if ($wachtwoord == $wachtwoord_conf){
+    //ingevoerde gegevens inserten
     $email = trim($_POST['email']);
     $voornaam = trim($_POST['voornaam']);
     $naam = trim($_POST['naam']);
-
+//uitvoeren sql
     $sql->execute();
 
     echo '<script type="text/javascript">
            alert("Jouw gegvens zijn geregistreerd! Ga naar login om in te loggen"); 
     </script>'; 
-    header("Location: ./games.php");
+    header("Location: ../index.php");
 
 } 
 }
 
-//uitvoeren sql
+
 
 
 //afsluiten connectie
