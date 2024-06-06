@@ -99,7 +99,7 @@
                 <img src="images//home/the-lost-key-background 1.png" alt="online game 1 image">
               </div>
               <div class="description">
-                <span>/online Games</span>
+              <a href="./pages/games.php">/online Games</a>
                 <hr>
                 <h2>01 "The Lost Key"</h2>
                 <hr>
@@ -112,7 +112,7 @@
                 <img src="images//home/time-machie-lab 1.png" alt="online game 1 image">
               </div>
               <div class="description">
-                <span>/online Games</span>
+                <a href="./pages/games.php">/online Games</a>
                 <hr>
                 <h2>02 "Het Verloren Tijdmachine"</h2>
                 <hr>
@@ -125,7 +125,7 @@
                 <img src="images//home/wallys-burgur 1.png" alt="online game 1 image">
               </div>
               <div class="description">
-                <span>/online Games</span>
+              <a href="./pages/games.php">/online Games</a>
                 <hr>
                 <h2>03 "Wally's Hamburger"</h2>
                 <hr>
