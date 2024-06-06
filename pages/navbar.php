@@ -24,11 +24,11 @@
           </div>
    
           <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+          <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
             <li><a href="./games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
             <li><a href="./reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
-            <li><a href="./AboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
+            <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
           </ul>
           <div class="col-md-3 text-end">
             <?php if (isset($_SESSION['voornaam'])){?>
@@ -47,10 +47,10 @@
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
               <div class="navbar-mobile-container bg-dark p-4">
                 <ul class="nav navbar-mobile justify-content-center">
-                <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-            <li><a href="../games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+                <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="./games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
-            <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
+            <li><a href="./reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
             <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
                 </ul>
                 <div class="col-md-3 text-end btn-login-mobile-menu p-2">

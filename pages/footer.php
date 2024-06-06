@@ -42,8 +42,8 @@
           </ul>
         </div>
         <div class="socials nav  col-6 col-md-2 mb-3">
-          <i class="uil uil-facebook"></i>
-          <i class="uil uil-instagram-alt"></i>
+          <a href="https://www.facebook.com/"><i class="uil uil-facebook" style="color:#fff;"></i></a>
+          <a href="https://www.instagram.com/"><i class="uil uil-instagram-alt" style="color:#fff;"></i></a>
         </div>
     </div>
       <div class="copyright d-flex flex-wrap ">

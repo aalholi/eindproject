@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,13 +39,13 @@
   <body>
         <header class="navbar d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <a href="index.php" class="d-inline-flex link-body-emphasis text-decoration-none">
               <img class="bi" width="100" height="60" role="img" aria-label="Bootstrap" src="images/logo.webp"/>
             </a>
           </div>
    
           <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
             <li><a href="pages/games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="pages/leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
             <li><a href="pages/reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
@@ -65,7 +68,7 @@
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
               <div class="navbar-mobile-container bg-dark p-4">
                 <ul class="nav navbar-mobile justify-content-center">
-                  <li><a href="index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+                  <li><a href="index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
                   <li><a href="pages/games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
                   <li><a href="pages/leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
                   <li><a href="pages/reserve.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
