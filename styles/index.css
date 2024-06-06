@@ -81,6 +81,9 @@ footer {
   height: max-content;
   padding-top: 40px;
 }
+footer .row{
+  margin-right: 0;
+}
 
 .navbar-menu-mobile {
   display: none;

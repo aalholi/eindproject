@@ -8,33 +8,36 @@ if($dbConnect->connect_error){
     die("Connection failed");
     exit();
 }
-
+//gebruiker gegvens in een variable steken en inserten
 $sql = $dbConnect->prepare("INSERT INTO gebruikers(voornaam, naam, email, wachtwoord)
 VALUES (?, ?, ?, ?)");
+
 //binden parameters
 $sql->bind_param("ssss", $voornaam, $naam, $email, $wachtwoord);
 
+//bij het klikken op de register button
 if (isset($_POST['register'])){
-
+  //wachtwoord confirmatie bekijken
   $wachtwoord = trim($_POST['password']);
   $wachtwoord_conf = trim($_POST['confirm_password']);
 
   if ($wachtwoord == $wachtwoord_conf){
+    //ingevoerde gegevens inserten
     $email = trim($_POST['email']);
     $voornaam = trim($_POST['voornaam']);
     $naam = trim($_POST['naam']);
-
+//uitvoeren sql
     $sql->execute();
 
     echo '<script type="text/javascript">
            alert("Jouw gegvens zijn geregistreerd! Ga naar login om in te loggen"); 
     </script>'; 
-    header("Location: ./games.php");
+    header("Location: ../index.php");
 
 } 
 }
 
-//uitvoeren sql
+
 
 
 //afsluiten connectie
@@ -60,14 +63,14 @@ mysqli_close($dbConnect);
   <body>
   <header class="navbar d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="../index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <a href="../index.php" class="d-inline-flex link-body-emphasis text-decoration-none">
               <img class="bi" width="100" height="60" role="img" aria-label="Bootstrap" src="../images/logo.webp"/>
             </a>
           </div>
    
           <ul class="nav nav-links col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-            <li><a href="./games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+            <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="./games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
             <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
             <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>
@@ -87,8 +90,8 @@ mysqli_close($dbConnect);
             <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
               <div class="navbar-mobile-container bg-dark p-4">
                 <ul class="nav navbar-mobile justify-content-center">
-                <li><a href="../index.html" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
-            <li><a href="../games.html" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
+                <li><a href="../index.php" class="nav-link px-2"><i class="uil uil-estate"></i>Home</a></li>
+            <li><a href="../games.php" class="nav-link px-2"><i class="uil uil-club"></i>Games</a></li>
             <li><a href="./leaderboard.php" class="nav-link px-2"><i class="uil uil-game-structure"></i>Leaderboard</a></li>
             <li><a href="./reservation.php" class="nav-link px-2"><i class="uil uil-schedule"></i>Reservation</a></li>
             <li><a href="./aboutUs.php" class="nav-link px-2"><i class="uil uil-info-circle"></i>About Us</a></li>

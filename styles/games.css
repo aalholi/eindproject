@@ -4,9 +4,10 @@
     
 }
 .card{
-    border: none;
+    
     background-color: #F9F9F9;
     color: #a5a5a5;
+    border: none;
 }
 #wrapper h1{
     color:#a5a5a5;

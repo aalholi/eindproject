@@ -11,39 +11,40 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/reserve.css">
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
-  
   <?php
         include "./navbar.php"; 
         ?>
-   
-    <form action="" method="post">
-        <label> Reservation </label>
-        <label for="surname">Surname: </label>
-        <input type="text" name="surname" id="surname"/>
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name"/>
-        <label for="email">Email: </label>
-        <input type="text" name="email" id="email"/>
-        <label for="game">Game: </label>
-        <select name="game" id="game">
+  <div class="kleur">
+    <form action="registreer.php" method="post">
+        <label> Reservation </label><br>
+        <label for="surname">Surname: </label><br>
+        <input type="text" name="surname" id="surname"/><br>
+        <label for="name">Name: </label><br>
+        <input type="text" name="name" id="name"/><br>
+        <label for="email">Email: </label><br>
+        <input type="text" name="email" id="email"/><br>
+        <label for="game">Game: </label><br>
+        <select name="game" id="game"><br>
           <option value="Selectgame">Select a game </option>
           <option value="Game1">Het verloren tijdmachine</option>
-          <option value="Game2">Game2 </option>
-          <option value="Game3">Game3 </option>
-</select>
-<label for="date">Date: </label>
-<input type="date" name="date" id="date"/>
-<label for="time">Time: </label>
-<input type="time" id="time" name="time" min="10:00" max="18:00" />
-<label for="players">Number of players: </label>
-<input type="number" id="players" name="players" min="1" max ="10" placeholder="Enter the number of players"/>
-<input type="submit" value="Book now!"/>
-</form>
+          <option value="Game2">Wally's hamburger </option>
+          <option value="Game3">Bedroom </option>
+</select><br>
+<label for="date">Date: </label><br>
+<input type="date" name="date" id="date"/><br>
+<label for="time">Time: </label><br>
+<input type="time" id="time" name="time" min="10:00" max="18:00" /><br>
+<label for="players">Number of players: </label><br>
+<input type="number" id="players" name="players" min="1" max ="10" placeholder="Enter the number of players"/><br>
+<input type="submit" value="Book now!"/><br>
+</form></div>
 <?php
+if (isset($_POST['submit'])) {
 $dbConnect = new mysqli('auth-db779.hstgr.io', 'u893409859_GroepA', 'ZeMeAw123', 'u893409859_GroepA');
 if($dbConnect->connect_error){
   die("Connection failed");
@@ -61,7 +62,7 @@ $voornaam = $_POST["name"];
 $sql->execute();
 echo "Thank you for reserving!";
 mysqli_close($dbConnect);
-
+}
 ?>
 
 
