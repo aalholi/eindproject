@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+
+main {
+  background-image: url(../images/background-leaderboard.webp);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.leaderboard {
+  width: 70%;
+  margin: auto auto;
+}
+
+.leaderboard h1 {
+  font-size: 5vw;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+form {
+  height: 80vh;
+  position: sticky;
+  top: 0;
+}
+
+form .filters {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+}
+form .refresh input {
+  width: 5vw;
+  color: white !important;
+  background-color: #2a2a2a;
+}
+
+form .rooms,
+form .filter {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  color: white;
+}
+
+table tbody,
+table thead {
+  display: block;
+}
+
+table tr th {
+  height: 40px;
+  line-height: 40px;
+}
+
+table tbody {
+  height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tbody {
+  border-top: 2px solid red;
+}
+
+tbody td,
+thead th {
+  width: 200px;
+}
+
+table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+td {
+  text-align: start;
+}
+@media (max-width: 767px) {
+  /* styles for mobile phones */
+
+  table tr {
+    gap: 3rem;
+  }
+}

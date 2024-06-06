@@ -8,14 +8,47 @@ if($dbConnect->connect_error){
     die("Connection failed");
     exit();
 }
-//sql-statement
+
+if(isset($_POST["filter"])){
+  if(isset($_POST["option"])) {
+    $order = $_POST["option"];
+
+    if($order == "Score Decending"){
+      $resultaat = AsscendingOrDescengingOrder("DESC");
+      
+    }
+    else{
+      $resultaat = AsscendingOrDescengingOrder("ASC");
+    }
+  }
+  else {
+  }
+  $resultaat = AsscendingOrDescengingOrder("ASC");
+}
+function AsscendingOrDescengingOrder($order){
+  $dbConnect = new mysqli('auth-db779.hstgr.io', 'u893409859_GroepA', 'ZeMeAw123', 'u893409859_GroepA');
+  //sql-statement
 $sql = "SELECT naam, voornaam, score, spel 
 FROM gebruikers g, scorebord s 
 WHERE g.gebruikerid = s.gebruikerid 
-ORDER BY s.score ASC;";
+ORDER BY s.score DESC;";
 
 //query uitvoeren => in de variabele resultaat gestoken
-$resultaat = $dbConnect->query($sql);
+return $resultaat = $dbConnect->query($sql);
+  
+}
+function RoomOrder($room){
+  $dbConnect = new mysqli('auth-db779.hstgr.io', 'u893409859_GroepA', 'ZeMeAw123', 'u893409859_GroepA');
+  //sql-statement
+$sql = "SELECT naam, voornaam, score, spel 
+FROM gebruikers g, scorebord s 
+WHERE g.gebruikerid = s.gebruikerid AND spel = '$room'
+ORDER BY s.score DEC;";
+
+//query uitvoeren => in de variabele resultaat gestoken
+return $resultaat = $dbConnect->query($sql);
+  
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +64,7 @@ $resultaat = $dbConnect->query($sql);
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/leaderboard.css">
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
@@ -39,25 +72,37 @@ $resultaat = $dbConnect->query($sql);
         include "./navbar.php"; 
         ?>
         <main>
-            <section id="hero-img">
-                <img src="../images/leaderbord.webp" alt="photo">
-            </section>
-            <section id="leaderboard">
-             <div class="container">
-  <div class="table-responsive small">
-        <table class="table table-dark table-hover">
+          <div class="leaderboard">
+            <h1>Game Ranks</h1>
+            <form class="form" action="leaderboard.php" method="post">
+            <div class="filters">
+              <div class="rooms">
+                <select name="rooms" id="rooms">
+                <option name="none" id="none">All Rooms</option>
+                  <option name="thebedroom" id="thebedroom">The Bedroom</option>
+                  <option name="hetverlorenmachine" id="hetverlorenmachine">Het Verloren Tijdmachine</option>
+                  <option name="wally'shamburger" id="wally'shamburger">Wally's Hamburger</option>
+                </select>
+              </div>
+              <div class="filter">
+                <select name="option" id="option">
+                  <option name="asscending" id="asscending">Score Asscending</option>
+                  <option name="descending" id="descending">Score Decending</option>
+                </select>
+              </div>
+              <div class="refresh"><input type="submit" value="filter" name="filter"></div>
+            </div>
+            <table>
               <thead>
-                <tr>
-                  <th scope="col">Rank</th>
-                  <th scope="col">Naam</th>
-                  <th scope="col">Voornaam</th>
-                  <th scope="col">Score</th>
-                  <th scope="col">Spel</th>
-                </tr>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Speler</th>
+                    <th>Score</th>
+                    <th>Spel</th>
+                  </tr>
               </thead>
               <tbody>
               <?php 
-              
               //controleren of er rijen zijn in ons resultaat
               if($resultaat->num_rows>0){
                   $rank = 1;
@@ -68,8 +113,7 @@ $resultaat = $dbConnect->query($sql);
                 <tr>
                   <?php
                   echo "<td>".$rank."</td>";
-                  echo "<td>".$rij["naam"]."</td>";
-                  echo "<td>".$rij["voornaam"]."</td>";
+                  echo "<td>".$rij["naam"]." ".$rij["voornaam"]. "</td>";
                   echo "<td>".$rij["score"]."</td>";
                   echo "<td>".$rij["spel"]."</td>";
                   ?>
@@ -86,20 +130,16 @@ $resultaat = $dbConnect->query($sql);
                                 
               
               ?>
+               
               </tbody>
-        </table>
- </div>
- </div>        
-            </section>
+            </table>
+          </div>
         </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <?php
-        include "./footer.php"; 
-        ?>
   </body>
 </html>
 
