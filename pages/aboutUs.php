@@ -11,7 +11,9 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="../styles/AboutUs.css">
+
+    <link rel="stylesheet" href="../styles/index.css">
     <title>Brawnies Escape Rooms</title>
   </head>
   <body>
@@ -19,7 +21,7 @@
   <?php
         include "./navbar.php"; 
         ?>
-        <img>
+         <img>
     <div class="text">
         Welcome to Brawnies Met Slagroom Escape room where adventure meets excitement!<br>
          We pride ourselves on creating immersive experiences that challenge your mind and ignite your sense of <br>
@@ -29,14 +31,14 @@
          bring people together, stimulate creativity and foster teamwork.<br>
 </div>
 <img>
-<div class="text2">
+<div class="text">
     Behind every great escape room experience is a dedicated <br>
     team of creators, designers and enthusiasts. Get to know <br>
     the talented individuals who bring our escape rooms to life<br>
     and ensure that every detail is perfect.<br>
 </div>
 <div class="title">
-    Contact us
+    <h1>Contact us</h1>
 </div>
 <div class="text">
     Ready to embark on your next adventure? Have a<br>
@@ -44,6 +46,8 @@
     in touch with us! You can reach us by phone, email or<br>
     through the contact form below.<br>
 </div>
+<div class="kleur">
+<div class="links">
 <form action="mailto:aalholi@handelsschoolaalst.be" method="post">
     <label for="name">Name:</label><br>
     <input type="text" name="name" id="name"/><br>
@@ -52,16 +56,18 @@
     <label for="email">Email:</label><br>
     <input type="text" name="email" id="email"/><br>
     <label for="msg">Message:</label><br>
-    <input type="text" name="msg" id="msg"/><br>
+    <textarea name="msg">Write your message here!</textarea><br>
     <input type="submit" value="Send"/>
 </form>
+<br>
+<br>
 Email: brescaperoom@gmail.com<br>
 Phone number: +32 479 22 61 75<br>
+</div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.9059302032615!2d3.718943476944056!3d51.054824743664106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c37146d42a23ff%3A0x75ab64eccdc5067!2sKorenmarkt%2020%2C%209000%20Gent!5e0!3m2!1snl!2sbe!4v1717405792608!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 
-
-</body>
 <?php
         include "./footer.php"; 
         ?>
