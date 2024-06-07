@@ -25,6 +25,9 @@ if(isset($_POST["filter"])){
   }
   $resultaat = AsscendingOrDescengingOrder("ASC");
 }
+else{
+  $resultaat = AsscendingOrDescengingOrder("DESC");
+}
 function AsscendingOrDescengingOrder($order){
   $dbConnect = new mysqli('auth-db779.hstgr.io', 'u893409859_GroepA', 'ZeMeAw123', 'u893409859_GroepA');
   //sql-statement
